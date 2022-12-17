@@ -1,0 +1,17 @@
+/*Author:Julian Zarcone 000878972*/
+@media print
+{    
+    .no-print, .no-print 
+    {
+        display: none !important;
+    }
+
+    body {
+        background-color: unset !important;
+        color: black !important;
+    }
+
+    table, th, td{
+        border: 0px !important;
+    }
+}

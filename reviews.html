@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Author:Julian Zarcone 000878972-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Adventure Reviews</title>
+    <link rel="stylesheet" href="adventuretyles.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="printstyles.css">
+</head>
+<body>
+    <header>
+        Outdoor Adventure Trip Reviews  2022/2023
+            
+    </header>
+    
+    <nav class="no-print">
+        <ul>
+            <li>
+                <a href="#">About Us</a>
+            </li>
+            <li>
+                <a href="#">Travel</a>
+            </li>
+            <li>
+                <a href="#">Photos</a>
+            </li>
+            <li>
+                <a href="reviews.html">Reviews</a>
+            </li>
+            <li>
+                <a href="seminars.html">Seminars</a>
+            </li>
+            <li>
+                <a href="#">Events</a>
+            </li>
+        </ul>
+    </nav>
+
+    <style>
+        .container{
+            background-color: #663399;
+            padding: 3px;
+        }
+
+        .container label, .container legend{
+            color: white;
+        }
+
+        .container input{
+            background-color: orchid;
+        }
+        td{
+            color: white;
+            text-align: right;
+        }
+
+        fieldset{
+            border: 1px solid white;
+            margin: 5px;
+        }
+
+        .response{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+
+    <div class="container">
+        <form action="https://csunix.mohawkcollege.ca/tooltime/showit.pl" method="POST">
+
+            <fieldset>
+                <legend>About You (optional)</legend>
+                <label>I usually Prefer to trips this time of year (select all that apply):</label> <br>
+                <select name="pref" multiple>
+                    <option value="Winter">Winter</option>
+                    <option value="Spring">Spring</option>
+                    <option value="Summer">Summer</option>
+                    <option value="Fall">Fall</option>
+                </select>
+                <br>
+
+                <table>
+                    <tr>
+                        <td>First Name</td>
+                        <td><input type="text" name="fname" maxlength="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td><input type="text" name="lname" maxlength="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td><input type="tel" name="phone" minlength="12" maxlength="12" placeholder="123-456-7890"></td>
+                    </tr>
+                    <tr>
+                        <td>Email Address</td>
+                        <td><input type="email" name="email" maxlength="40"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Trip Reviews</legend>
+                <select name="trip">
+                    <option value="Alberta Rural">Alberta Rural</option>
+                    <option value="B.C. Coast" selected>B.C. Coast</option>
+                    <option value="Ontario Lake Superior">Ontario Lake Superior</option>
+                    <option value="PEI">PEI</option>
+                    <option value="Nova Scotia Cabot Trail">Nova Scotia Cabot Trail</option>
+                </select>
+                <select name="duration">
+                    <option value="5d">5 Days</option>
+                    <option value="7d">7 Days</option>
+                    <option value="10d">10 Days</option>
+                    <option value="14d">14 Days</option>
+                </select> 
+                <br><br>
+
+                <label>Your rating:</label> <br>
+                <input type="radio" name="rating" value="4"><img src="images/wheel_sm.jpg" alt="Wheel"><img src="images/wheel_sm.jpg" alt="Wheel"><img src="images/wheel_sm.jpg" alt="Wheel"><img src="images/wheel_sm.jpg" alt="Wheel"><br>
+                <input type="radio" name="rating" value="3"><img src="images/wheel_sm.jpg" alt="Wheel"><img src="images/wheel_sm.jpg" alt="Wheel"><img src="images/wheel_sm.jpg" alt="Wheel"><br>
+                <input type="radio" name="rating" value="2"><img src="images/wheel_sm.jpg" alt="Wheel"><img src="images/wheel_sm.jpg" alt="Wheel"><br>
+                <input type="radio" name="rating" value="1"><img src="images/wheel_sm.jpg" alt="Wheel"><br>
+
+                <br>
+                <label>Comments</label> <br>
+                <textarea name="comments" cols="65" rows="7"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>I would be interested in these trips: (check all that apply)</legend> <br>
+                <input type="checkbox" name="interested" value="Coast"><label>Sea or Lake Coast</label> <br>
+                <input type="checkbox" name="interested" value="Rural"><label>Rural</label> <br>
+                <input type="checkbox" name="interested" value="Mountains" checked><label>Mountains</label> <br>
+                <input type="checkbox" name="interested" value="Other"> <label>Other (please specify)</label> <input type="text" name="otherdestination">
+            </fieldset>
+            <br>
+
+            <input type="hidden" name="formname" value="Julianzarcone Trip Review">
+
+            <input type="submit" name="send" value="SEND REVIEW">
+            <input type="button" name="cancel" value="CANCEL">
+            <br><br>
+        </form>
+    </div>
+    <br>
+    <div class="response">
+        <img src="images/response.png" alt="Response">
+    </div>
+    <footer class="no-print">
+        <img src="images/outdooradventurehorizontal.png" alt="footer">
+    </footer>
+ 
+</body>
+</html>
